@@ -60,10 +60,11 @@ class MyClient(discord.Client):
                 database.update_last_seen(user_data)
 
         print('Message', msg)
-                
+
         admin_channel = self.get_channel(self.channel)
         if len(msg):
             await admin_channel.send(msg)
+
         # TODO: Добавить запись когда пользак вернулся и когда отсутствовал (name, last_seen, connected_at, role)
         # ! Чтобы по ролям можно было в конце дня делать отчет кто и когда отсутствовал 
 
